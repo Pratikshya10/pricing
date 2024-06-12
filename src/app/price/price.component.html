@@ -1,0 +1,42 @@
+<div id="head">
+  <h1>Simple And Flexible Pricing</h1>
+  <h5>Choose a plan that fits your needs best</h5>
+</div>
+
+<div class="button">
+    <button (click)="tooglePrice()">Monthly</button>
+    <button (click)="tooglePrice()">Yearly</button>
+  </div>
+  
+  <div class="middle">
+    <div *ngIf="ShowMonthlyPrice" >
+      <h2 id="my">Monthly Prices</h2>
+      <div class="month">
+        <div  class="column"><b>Personal for you</b><br><br>: ${{ monthlyPrices[0] }}
+          <p>20gb stoarge</p>
+        </div>
+        <div class="column"><b>Agency plan for you</b><br><br>: ${{ monthlyPrices[1] }}
+          <p>500gb stoarge</p>
+        </div>
+        <div class="column"><b>Unlimited plan</b><br><br>: ${{ monthlyPrices[2] }}
+          <p>Unlimited stoarge</p>
+        </div>
+      </div>
+    </div>
+    
+    <div *ngIf="!ShowMonthlyPrice" class="year">
+      <h2 id="my">Yearly Prices</h2>
+      <div class="month">
+        <div class="column"><b>Personal for you</b><br><br>: ${{ yearlyPrices[0] }}
+          <p>20gb stoarge</p>
+        </div>
+        <div class="column"><b>Agency plan for you</b><br><br>: ${{ yearlyPrices[1] }}
+          <p>500gb stoarge</p>
+        </div>
+        <div class="column"><b>Unlimited plan</b><br><br>: ${{ yearlyPrices[2] }}
+          <p>Unlimited stoarge</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
